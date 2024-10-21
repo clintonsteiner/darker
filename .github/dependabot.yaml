@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/" # Adjust this if your setup.cfg is in a subdirectory
+    schedule:
+      interval: "weekly" # or "weekly", "monthly"
+    groups:
+      python-packages:
+        patterns:
+          - "*"

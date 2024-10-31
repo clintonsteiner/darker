@@ -4,9 +4,8 @@ updates:
     directory: "/" # Adjust this if your setup.cfg is in a subdirectory
     schedule:
       interval: "weekly" # or "weekly", "monthly"
-    file: "constraints-oldest.txt"
-  - package-ecosystem: "pip"
-    directory: "/" # Adjust this if your setup.cfg is in a subdirectory
-    schedule:
-      interval: "weekly" # or "weekly", "monthly"
-    file: "setup.cfg"
+    allow:
+      - dependency-type: "direct"
+    additional-files:
+      - "setup.cfg"
+      - "constraints-oldest.txt"

@@ -8,8 +8,8 @@ updates:
       python-packages:
         patterns:
           - "*"
-- package-ecosystem: "pip"
-  directory: "/" # Adjust this if your setup.cfg is in a subdirectory
-  schedule:
-    interval: "weekly" # or "weekly", "monthly"
-  file: "setup.cfg"
+  - package-ecosystem: "pip"
+    directory: "/" # Adjust this if your setup.cfg is in a subdirectory
+    schedule:
+      interval: "weekly" # or "weekly", "monthly"
+    file: "setup.cfg"

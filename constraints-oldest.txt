@@ -21,4 +21,4 @@ toml==0.10.0
 twine==2.0.0
 types-toml==0.10.4
 typing_extensions==4.0.1
-wheel==0.21.0
+wheel==0.44.0

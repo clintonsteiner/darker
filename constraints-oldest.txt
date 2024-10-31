@@ -6,7 +6,7 @@
 black==24.1.0
 darkgraylib==2.0.1
 defusedxml==0.7.1
-flake8-2020==1.6.1
+flake8-2020==1.8.1
 flake8-bugbear==22.1.11
 flake8-comprehensions==3.7.0
 flynt==0.76

@@ -11,6 +11,8 @@ Added
 - Display exit code in parentheses after error message.
 - Do not reformat renamed files.
 - CI workflow to post recent project activity in a discussion. Triggered manually.
+- CI "future" test now tests against ``main`` of Darkgraylib_ in addition to Black_,
+  Flynt_ and isort_.
 - The ``--preview`` configuration flag is now supported in the configuration files for
   Darker and Black
 - Prevent Pylint from updating beyond version 3.2.7 due to dropped Python 3.8 support.
@@ -34,8 +36,9 @@ Removed
 Fixed
 -----
 - Update ``darkgray-dev-tools`` for Pip >= 24.1 compatibility.
-- Update to Darkgraylib 2.0.1 to fix the configuration dump, the output of ``--version``
-  and the Git "dubious ownership" issue (see below).
+- Update to Darkgraylib 2.2.0 to fix the configuration dump, the output of
+  ``--version``, the Git "dubious ownership" issue, and source code line splitting
+  (see below).
 - In the configuration dump printed when ``-vv`` verbosity is used, the configuration
   section is now correctly named ``[tool.darker]`` instead of ``[tool.darkgraylib]``.
 - Pass Graylint version to `~darkgraylib.command_line.make_argument_parser` to make
@@ -44,6 +47,8 @@ Fixed
 - Work around a `pathlib.Path.resolve` bug in Python 3.8 and 3.9 on Windows.
   The work-around should be removed when Python 3.8 and 3.9 are no longer supported.
 - Add missing configuration flag for Flynt_.
+- Only split source code lines at Python's universal newlines (LF, CRLF, CR).
+- The Darker GitHub action now respects the ``working-directory`` input option.
 
 
 2.1.1_ - 2024-04-16
@@ -686,4 +691,5 @@ Added
 .. _pydocstyle: http://www.pydocstyle.org/
 .. _Ruff: https://astral.sh/ruff
 .. _Black: https://black.readthedocs.io/
+.. _isort: https://pycqa.github.io/isort/
 .. _NixOS: https://nixos.org/
